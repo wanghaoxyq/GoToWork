@@ -10,7 +10,7 @@ function getDomainFromUrl(url){
 }
 
 function checkForUrl(tabId, info, tab){
-	if(info.status == 'loading'){
+	if(info.status == 'loading' || info.status == 'complete'){
 		var domain = getDomainFromUrl(tab.url).toLowerCase();
 		switch(domain){
 			case "weibo.com":
@@ -32,8 +32,9 @@ function checkForUrl(tabId, info, tab){
 			case "www.56.com":
 			case "www.ku6.com":
 			case "tieba.baidu.com":
-				chrome.tabs.update({
+				chrome.tabs.update(tabId, {
 					'url' : "GoToWork.html"
+					'highlighted' : true
 				});
 				break;
 			default: break;
