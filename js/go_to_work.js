@@ -1,1 +1,4 @@
-document.getElementById("p1").innerHTML="Hello New World test"
+
+chrome.management.get(id, function(result){
+	chrome.management.setEnabled(id, true);
+});

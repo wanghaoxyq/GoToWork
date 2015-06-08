@@ -33,7 +33,7 @@ function checkForUrl(tabId, info, tab){
 			case "www.ku6.com":
 			case "tieba.baidu.com":
 				chrome.tabs.update(tabId, {
-					'url' : "GoToWork.html"
+					'url' 		  : "GoToWork.html",
 					'highlighted' : true
 				});
 				break;
